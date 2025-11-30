@@ -1,0 +1,14 @@
+{
+  "workspace": {
+    "id": "9b1cb298-0eec-4924-8272-6c306dd9dfdc"
+  },
+  "entities": {
+    "collections": [
+      "..\\postman\\collections\\Backend Course 2025 – Lab 6 Inventory Service.postman_collection.json"
+    ],
+    "environments": [],
+    "specs": [],
+    "flows": [],
+    "globals": []
+  }
+}

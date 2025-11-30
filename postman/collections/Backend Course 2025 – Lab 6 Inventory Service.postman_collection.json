@@ -1,0 +1,277 @@
+{
+  "info": {
+    "_postman_id": "16989d29-0685-4444-9597-29c7ac786817",
+    "name": "Backend Course 2025 – Lab 6 Inventory Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50458943",
+    "_collection_link": "https://viktoriiavykhrystiuk-4543122.postman.co/workspace/9b1cb298-0eec-4924-8272-6c306dd9dfdc/collection/50458943-16989d29-0685-4444-9597-29c7ac786817?action=share&source=collection_link&creator=50458943"
+  },
+  "item": [
+    {
+      "name": "Register Device",
+      "id": "9fbeb303-864d-4332-8a75-1d3c80e81706",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "inventory_name",
+              "value": "ноутбук",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "чорний",
+              "type": "text"
+            },
+            {
+              "key": "photo",
+              "type": "file",
+              "src": "postman-cloud:///1f0cdde9-b421-4b40-8627-81a2d2cb4060"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/register",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Inventory",
+      "id": "1052dd36-f36e-4f1e-9b99-d3bb7295b313",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/inventory",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Inventory Item",
+      "id": "70a18ab7-f908-4fe4-ac4f-a03f47b2be61",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/inventory/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Inventory Item",
+      "id": "77f7c343-c1bb-432e-a150-892bc47591df",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"inventory_name\": \"нове імʼя\",\r\n  \"description\": \"оновлений опис\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/inventory/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Photo",
+      "id": "6e540db4-eb9f-47be-87ff-9d2f63aa5bfe",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/inventory/1/photo",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory",
+            "1",
+            "photo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Photo",
+      "id": "3488d679-9e3a-4c0a-8320-4065c720e80c",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photo",
+              "type": "file",
+              "src": "postman-cloud:///1f0cde13-b6b7-4880-baed-0f4bc9d26e4f"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/inventory/1/photo",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory",
+            "1",
+            "photo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search",
+      "id": "e8c0c171-521a-4771-8fb8-07772a0a1918",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "has_photo",
+              "value": "on",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:3000/search",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Item",
+      "id": "cea838f3-a886-4f44-9ba1-d3f2f0569aac",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:3000/inventory/1\n",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory",
+            "1\n"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
