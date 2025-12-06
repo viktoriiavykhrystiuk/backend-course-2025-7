@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+require('dotenv').config();
 
 // app.js — головний файл програми для ЛР6 (інвентаризація)
 
@@ -127,7 +128,7 @@ const swaggerDocument = {
   },
   servers: [
     {
-      url: `http://${HOST}:${PORT}`,
+      url: `http://localhost:${PORT}`,
     },
   ],
   paths: {
