@@ -590,11 +590,19 @@ async function start() {
     await ensureCacheDir();
     await loadInventory();
 
+      app.get('/', (req, res) => {
+    res.status(200).json({
+      status: 'OK',
+      service: 'Inventory service',
+      docs: 'http://localhost:3000/docs'
+    });
+  });
+
     const server = http.createServer(app);
-    server.listen(PORT, HOST, () => {
-      console.log(`Inventory service is running at http://${HOST}:${PORT}`);
-      console.log(`Cache directory: ${CACHE_DIR}`);
-      console.log('Swagger docs: /docs');
+    app.listen(port, host, () => {
+      console.log(`Inventory service is running at http://localhost:${port}`);
+      console.log(`Cache directory: ${cacheDir}`);
+      console.log(`Swagger docs: http://localhost:${port}/docs`);
     });
   } catch (err) {
     console.error('Помилка під час старту сервера:', err);

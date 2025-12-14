@@ -1,16 +1,15 @@
 services:
-  app:
+  api:
     build: .
-    container_name: bc2025-7-app
+    container_name: backend-course-6-dev
     ports:
-      - "3000:3000"
+      - "3001:3000"
+      - "9229:9229"
     volumes:
       - .:/app
       - /app/node_modules
-    env_file:
-      - .env
-    depends_on:
-      - db
+    command: npm run dev
+
 
   db:
     image: mysql:8

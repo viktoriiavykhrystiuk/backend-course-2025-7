@@ -1,25 +1,18 @@
 {
-  "name": "backend-course-2025-6",
+  "name": "backend-course-2025-7",
   "version": "1.0.0",
-  "description": "",
+  "description": "Inventory service for backend course lab 6",
   "main": "app.js",
-  "scripts": {
-    "start": "node app.js --host 127.0.0.1 --port 3000 --cache ./cache",
-    "dev": "nodemon app.js --host 127.0.0.1 --port 3000 --cache ./cache",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/viktoriiavykhrystiuk/backend-course-2025-6.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/viktoriiavykhrystiuk/backend-course-2025-6/issues"
+
+  "scripts": {
+    "start": "node app.js --host 0.0.0.0 --port 3000 --cache ./cache",
+
+    "dev": "nodemon --legacy-watch --signal SIGTERM app.js --host 0.0.0.0 --port 3000 --cache ./cache",
+
+    "debug": "node --inspect=0.0.0.0:9229 app.js --host 0.0.0.0 --port 3000 --cache ./cache"
   },
-  "homepage": "https://github.com/viktoriiavykhrystiuk/backend-course-2025-6#readme",
+
   "dependencies": {
     "commander": "^14.0.2",
     "dotenv": "^17.2.3",
@@ -28,8 +21,20 @@
     "superagent": "^10.2.3",
     "swagger-ui-express": "^5.0.1"
   },
+
   "devDependencies": {
     "nodemon": "^3.1.11"
-  }
-}
+  },
 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viktoriiavykhrystiuk/backend-course-2025-6.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/viktoriiavykhrystiuk/backend-course-2025-6/issues"
+  },
+
+  "homepage": "https://github.com/viktoriiavykhrystiuk/backend-course-2025-6#readme",
+  "license": "ISC"
+}
